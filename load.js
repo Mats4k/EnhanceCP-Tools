@@ -163,7 +163,7 @@ function setupToolsPage() {
 
     //Fetch Data
     if(!SS88Tools.pagesSetup) ContentBox.innerHTML += `
-    <div class="ss88_card ss88_fetch" data-for="Fetch" style="text-align:center; padding:100px;">
+    <div class="ss88_card ss88_fetch" data-for="Fetch" style="text-align:center; padding:100px; background-color:#060606; color:#FFF;">
 
         <div class="lds-ripple" style="display:none;"><div></div><div></div></div>
         <div class="fetch_requests" style="display:none;">Fetching <span>N/A</span> of <span>N/A</span> requests...</div>
