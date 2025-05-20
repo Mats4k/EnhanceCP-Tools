@@ -869,8 +869,14 @@ function injectCSS() {
     font-weight:300;
     margin:0;
 }
+
+body, .content-box, .page-content {
+    background-color:#060606 !important;
+    color:#FFF !important;
+}
+
 .ss88_menu {
-    background-color:white;
+    background-color:#060606 !important;
     width:100%;
     display:flex;
     margin-top:20px;
@@ -881,9 +887,11 @@ function injectCSS() {
     cursor:pointer;
     border-bottom:2px solid transparent;
     transition:all 0.3s ease-in-out;
+    color:#FFF !important;
+    background-color:#060606 !important;
 }
 .ss88_menu>button.active, .ss88_menu>button:hover {
-    border-bottom:2px solid black;
+    border-bottom:2px solid #FFF;
 }
 .ss88_menu>button>span {
     font-size: 12px;
@@ -892,7 +900,7 @@ function injectCSS() {
 }
 .ss88_box .ss88_card {
     border-radius: 2px;
-    background-color: rgb(255, 255, 255);
+    background-color:#121212 !important;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -901,27 +909,104 @@ function injectCSS() {
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 8px 0px;
     padding: 16px;
     margin-top: 35px;
+    color:#FFF !important;
+    border: 1px solid #333;
 }
 .ss88_card table {
     font-size:13px;
     width:100%;
 }
 .ss88_card table thead {
-    background-color: black;
+    background-color:#060606 !important;
     color: white;
     cursor:pointer;
 }
 .ss88_card table th, .ss88_card table td {
     padding:10px;
     text-align:left;
+    background-color:#060606 !important;
+    color:#FFF !important;
+    border: 1px solid #333;
 }
 .ss88_card table :not(thead) tr:hover { 
-    background-color: #ebebeb;
+    background-color:#2c2c2c !important;
+}
+.ss88_card table :not(thead) tr:nth-child(even) {
+    background-color:#1a1a1a !important;
 }
 .ss88_card table a {
-    color:black;
+    color:#64b5f6 !important;
 }
 
+table, .table, .ss88_table {
+    background-color:#060606 !important;
+    color:#FFF !important;
+    border-collapse: collapse;
+}
+
+table th, .table th, .ss88_table th,
+table td, .table td, .ss88_table td {
+    background-color:#060606 !important;
+    color:#FFF !important;
+    border: 1px solid #333;
+}
+
+table tr:nth-child(even), .table tr:nth-child(even), .ss88_table tr:nth-child(even) {
+    background-color:#1a1a1a !important;
+}
+
+table tr:hover, .table tr:hover, .ss88_table tr:hover {
+    background-color:#2c2c2c !important;
+}
+
+.top-bar, .navbar, .menu, .main-nav, .header, #top-menu {
+    background-color:#060606 !important;
+    color:#FFF !important;
+}
+
+.top-bar a, .navbar a, .menu a, .main-nav a, .header a, #top-menu a,
+.top-bar li, .navbar li, .menu li, .main-nav li, .header li, #top-menu li {
+    color:#FFF !important;
+}
+
+.top-bar a:hover, .navbar a:hover, .menu a:hover, .main-nav a:hover, .header a:hover, #top-menu a:hover {
+    color:#DDD !important;
+    background-color:#1a1a1a !important;
+}
+
+.ss88_card, .card {
+    background-color:#121212 !important;
+    color:#FFF !important;
+    border: 1px solid #333;
+}
+
+.ss88_fetch {
+    background-color:#060606 !important;
+    color:#FFF !important;
+}
+
+a {
+    color:#64b5f6 !important;
+}
+a:hover {
+    color:#90caf9 !important;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], textarea, select {
+    background-color:#1a1a1a !important;
+    color:#FFF !important;
+    border: 1px solid #333 !important;
+}
+
+button, .button, input[type="submit"], input[type="button"] {
+    background-color:#333 !important;
+    color:#FFF !important;
+    border: 1px solid #555 !important;
+}
+
+button:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color:#555 !important;
+}
 
 .ss88_dnsbl, .ss88_serverlogs {
     width:100%;
@@ -957,60 +1042,52 @@ function injectCSS() {
 }
 
 @media screen and(max-width:768px) {
-
     .ss88_dnsbl .ss88_result {
-
         width:48%;
-
     }
-
 }
 @media screen and(max-width:500px) {
-
     .ss88_dnsbl .ss88_result {
-
         width:100%;
-
     }
-    
 }
 .fetch_requests>span {
-font-weight:bold;
+    font-weight:bold;
 }
 
 .ss88_box progress {
-	background-color: #f3f3f3;
-	border: 0;
-	width: 100%;
-	height: 18px;
-	border-radius: 3px;
+    background-color:#1a1a1a !important;
+    border: 0;
+    width: 100%;
+    height: 18px;
+    border-radius: 3px;
     position:relative;
 }
 .ss88_box progress::-webkit-progress-bar {
-	background-color: #f3f3f3;
-	border-radius: 3px;
+    background-color:#1a1a1a !important;
+    border-radius: 3px;
 }
 .ss88_box progress::-webkit-progress-value {
-	background: #cdeb8e;
-	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
-	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
-	border-radius: 3px;
+    background: #cdeb8e;
+    background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+    background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+    background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+    background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+    background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+    border-radius: 3px;
 }
 .ss88_box progress.red::-webkit-progress-value {
-	background: #eb8e8e;
-	background: -moz-linear-gradient(top,  #eb8e8e 0%, #c95656 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c95656), color-stop(100%,#c95656));
-	background: -webkit-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
-	background: -o-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
-	background: -ms-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
-	background: linear-gradient(to bottom,  #eb8e8e 0%,#c95656 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb8e8e', endColorstr='#c95656',GradientType=0 );
-	border-radius: 3px;
+    background: #eb8e8e;
+    background: -moz-linear-gradient(top,  #eb8e8e 0%, #c95656 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c95656), color-stop(100%,#c95656));
+    background: -webkit-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
+    background: -o-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
+    background: -ms-linear-gradient(top,  #eb8e8e 0%,#c95656 100%);
+    background: linear-gradient(to bottom,  #eb8e8e 0%,#c95656 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb8e8e', endColorstr='#c95656',GradientType=0 );
+    border-radius: 3px;
 }
 .ss88_box progress::before {
     content: attr(title);
@@ -1033,7 +1110,8 @@ font-weight:bold;
 .dnsrbl_key>div {
     border-left: 3px solid #24a148;
     box-shadow:rgb(0 0 0 / 10%) 0px 4px 8px 0px;
-    background: #ffffff;
+    background:#121212 !important;
+    color:#FFF !important;
     padding: 20px;
     width: 100%;
     font-weight:bold;
@@ -1054,52 +1132,52 @@ font-weight:bold;
     height: 80px;
     margin: auto;
     margin-top: 50px;
-  }
-  .lds-ripple div {
+}
+.lds-ripple div {
     position: absolute;
-    border: 4px solid #000;
+    border: 4px solid #FFF;
     opacity: 1;
     border-radius: 50%;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  }
-  .lds-ripple div:nth-child(2) {
+}
+.lds-ripple div:nth-child(2) {
     animation-delay: -0.5s;
-  }
-  @keyframes lds-ripple {
+}
+@keyframes lds-ripple {
     0% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 0;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
     4.9% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 0;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
     5% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 1;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
     }
     100% {
-      top: 0px;
-      left: 0px;
-      width: 72px;
-      height: 72px;
-      opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
     }
-  }
-  
-    `;
+}
+`;
 
     var style = document.createElement("style")
     style.innerText = CSS
     document.head.appendChild(style)
-
 }
+
+
